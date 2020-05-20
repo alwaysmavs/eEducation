@@ -4,6 +4,7 @@ package-lock.json
 *.dev
 release
 .env
+.idea
 !.env.example
 *.~
 *.*~.DS_Store
