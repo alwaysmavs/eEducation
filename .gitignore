@@ -3,7 +3,7 @@ node_modules
 package-lock.json
 *.dev
 release
-.env
+education_web/.env.local
 .idea
 !.env.example
 *.~
