@@ -134,9 +134,9 @@ function HomePage() {
       <div className="web-menu">
         <div className="web-menu-container">
           <div className="short-title">
-            <span className="title">{t('home.short_title.title')}</span>
-            <span className="subtitle">{t('home.short_title.subtitle')}</span>
-            <span className="build-version">{t("build_version")}</span>
+            {/*<span className="title">{t('home.short_title.title')}</span>*/}
+            {/*<span className="subtitle">{t('home.short_title.subtitle')}</span>*/}
+            {/*<span className="build-version">{t("build_version")}</span>*/}
           </div>
           <div className="setting-container">
             <div className="flex-row">
@@ -174,19 +174,8 @@ function HomePage() {
       </div>
       }
       <div className="custom-card">
-        {!isElectron ? <GithubIcon /> : null}
         <div className="flex-item cover">
-          {isElectron ? 
-          <>
-          <div className={`short-title ${globalStore.state.language}`}>
-            <span className="title">{t('home.short_title.title')}</span>
-            <span className="subtitle">{t('home.short_title.subtitle')}</span>
-          </div>
-          <div className={`cover-placeholder ${t('home.cover_class')}`}></div>
-          <div className='build-version'>{t("build_version")}</div>
-          </>
-          : <div className={`cover-placeholder-web ${t('home.cover_class')}`}></div>
-          }
+          <div className={`cover-placeholder-web ${t('home.cover_class')}`}></div>
         </div>
         <div className="flex-item card">
           <div className="position-top card-menu">

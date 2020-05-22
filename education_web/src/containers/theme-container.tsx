@@ -38,7 +38,7 @@ const THEME = createMuiTheme({
         },
         '&$focused': {
           '&:after': {
-            borderBottom: '2px solid #44a2fc',
+            borderBottom: '2px solid #5B908F',
           }
         },
       }

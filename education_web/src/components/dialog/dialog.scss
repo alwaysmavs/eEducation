@@ -45,14 +45,14 @@
     .confirm {
       width:90px;
       height:34px;
-      background:#44A2FC;
+      background:#5B908F;
       border-radius:17px;
       font-size:14px;
       font-weight:400;
       color:#ffffff;
       line-height:20px;
       &:hover {
-        background: #82C2FF
+        background: #79A4A2
       }
     }
     .cancel {
@@ -62,13 +62,13 @@
       border-radius:17px;
       font-size:14px;
       font-weight:400;
-      color:#44A2FC;
+      color:#5B908F;
       line-height:20px;
-      border: 1px solid #44A2FC;
+      border: 1px solid #5B908F;
       &:hover {
         background: #ffffff;
-        color: #7CBFFF;
-        border: 1px solid #7CBFFF;
+        color: #79A4A2;
+        border: 1px solid #79A4A2;
       }
     }
   }

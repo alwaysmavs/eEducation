@@ -10,13 +10,13 @@ const useStyles = makeStyles({
     marginTop: '8px',
   },
   sliderClass: {
-    color: '#44A2FC',
+    color: '#5B908F',
     minWidth: '210px',
     marginLeft: '6px',
   },
   sliderRailClass: {
     height: '12px',
-    color: '#44A2FC'
+    color: '#5B908F'
   },
   sliderMarkClass: {
     height: '12px',

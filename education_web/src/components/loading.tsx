@@ -6,7 +6,7 @@ import { useGlobalState } from '../containers/root-container';
 const useStyles = makeStyles(theme => ({
   progress: {
     margin: theme.spacing(2),
-    color: '#44A2FC'
+    color: '#5B908F'
   },
   container: {
     position: 'absolute',

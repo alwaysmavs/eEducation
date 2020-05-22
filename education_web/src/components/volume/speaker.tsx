@@ -11,7 +11,7 @@ const useStyles = makeStyles({
     marginTop: '8px',
   },
   sliderClass: {
-    color: '#44A2FC',
+    color: '#5B908F',
     minWidth: '210px',
     marginLeft: '6px'
   }

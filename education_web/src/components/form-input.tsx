@@ -5,7 +5,7 @@ import { Theme, Typography, InputLabel, Input } from '@material-ui/core';
 const useStyles = makeStyles ((theme: Theme) => ({
   formInput: {
     '&:after': {
-      borderBottom: '1px solid #44a2fc'
+      borderBottom: '1px solid #5B908F'
     }
   },
   required: {

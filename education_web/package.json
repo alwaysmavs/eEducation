@@ -1,5 +1,5 @@
 {
-  "name": "Agora-Edu-Web",
+  "name": "Netless",
   "version": "5.4.0",
   "private": true,
   "homepage": ".",
@@ -31,7 +31,7 @@
     "extraMetadata": {
       "main": "build/index.js"
     },
-    "productName": "AgoraEducation",
+    "productName": "Netless",
     "appId": "io.agora.education",
     "files": [
       "build/**/*"
@@ -43,11 +43,11 @@
       ],
       "icon": "icons/favicon.png",
       "entitlements": "entitlements.mac.plist",
-      "category": "io.agora.Education",
+      "category": "io.netless.Education",
       "hardenedRuntime": true,
       "extendInfo": {
-        "NSMicrophoneUsageDescription": "AgoraEdu Classroom acquire your microphone permission",
-        "NSCameraUsageDescription": "AgoraEdu Classroom acquire your camera permission"
+        "NSMicrophoneUsageDescription": "Netless Classroom acquire your microphone permission",
+        "NSCameraUsageDescription": "Netless Classroom acquire your camera permission"
       }
     },
     "win": {
