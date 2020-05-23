@@ -1,13 +1,13 @@
-import { EventEmitter } from 'events';
-import { videoPlugin } from '@netless/white-video-plugin';
-import { audioPlugin } from '@netless/white-audio-plugin';
-import { Room, WhiteWebSdk, DeviceType, SceneState, createPlugins, RoomPhase } from 'white-web-sdk';
-import { Subject } from 'rxjs';
+import {EventEmitter} from 'events';
+import {videoPlugin} from '@netless/white-video-plugin';
+import {audioPlugin} from '@netless/white-audio-plugin';
+import {createPlugins, RenderEngine, Room, RoomPhase, SceneState, WhiteWebSdk} from 'white-web-sdk';
+import {Subject} from 'rxjs';
 import GlobalStorage from '../utils/custom-storage';
-import { isEmpty, get } from 'lodash';
-import { roomStore } from './room';
-import { globalStore } from './global';
-import { t } from '../i18n';
+import {get, isEmpty} from 'lodash';
+import {roomStore} from './room';
+import {globalStore} from './global';
+import {t} from '../i18n';
 
 const ENABLE_LOG = process.env.REACT_APP_AGORA_LOG === 'true';
 
@@ -100,11 +100,11 @@ class Whiteboard extends EventEmitter {
   }
 
   public readonly client: WhiteWebSdk = new WhiteWebSdk({
-    deviceType: DeviceType.Surface,
-    // handToolKey: " ",
+    appIdentifier: "283/VGiScM9Wiw2HJg",
     plugins,
+    renderEngine: RenderEngine.Canvas,
     loggerOptions: {
-      disableReportLog: ENABLE_LOG ? false : true,
+      disableReportLog: !ENABLE_LOG,
       reportLevelMask: "debug",
       printLevelMask: "debug",
     }
