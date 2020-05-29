@@ -1,7 +1,7 @@
 import {EventEmitter} from 'events';
 import {videoPlugin} from '@netless/white-video-plugin';
 import {audioPlugin} from '@netless/white-audio-plugin';
-import {createPlugins, RenderEngine, Room, RoomPhase, SceneState, WhiteWebSdk} from 'white-web-sdk';
+import {AnimationMode, createPlugins, RenderEngine, Room, RoomPhase, SceneState, WhiteWebSdk} from 'white-web-sdk';
 import {Subject} from 'rxjs';
 import GlobalStorage from '../utils/custom-storage';
 import {get, isEmpty} from 'lodash';
@@ -318,13 +318,30 @@ class Whiteboard extends EventEmitter {
       onHandToolActive: active => {},
       onPPTLoadProgress: (uuid: string, progress: number) => {},
     });
-
+    this.pptAutoFullScreen(room);
+    room.setMemberState({pencilOptions: {disableBezier: false, sparseHump: 2.0, sparseWidth: 3.0}});
     this.state = {
       ...this.state,
       room,
     }
     this.commit(this.state);
   }
+
+  pptAutoFullScreen(room: Room) {
+    const scene = room.state.sceneState.scenes[room.state.sceneState.index];
+    if (scene && scene.ppt) {
+      const width = scene.ppt.width;
+      const height = scene.ppt.height;
+      room.moveCameraToContain({
+        originX: - width / 2,
+        originY: - height / 2,
+        width: width,
+        height: height,
+        animationMode: AnimationMode.Immediately,
+      });
+    }
+  }
+
 
   cleanRoom () {
     this.state = {
